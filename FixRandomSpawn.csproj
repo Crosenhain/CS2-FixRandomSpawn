@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <None Update="public/addons/counterstrikesharp/plugins/FixRandomSpawn/gamedata/FixRandomSpawn.json" Link="gamedata/FixRandomSpawn.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="public/addons/counterstrikesharp/plugins/FixRandomSpawn/lang/*.json" Link="lang/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
