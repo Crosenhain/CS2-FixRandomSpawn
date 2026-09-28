@@ -36,6 +36,11 @@ public unsafe partial class MemoryPatch(string? modulePath = null)
     public void Init(string signature)
     {
         _addr = NativeAPI.FindSignature(_modulePath, signature);
+
+        if (_addr == nint.Zero)
+        {
+            throw new InvalidOperationException($"Signature not found in {_modulePath}: {signature}");
+        }
     }
 
     public void Apply(string patchSignature, int offset = 0)
